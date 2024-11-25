@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.2/css/boxicons.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+</head>
+<body>
+  <div id="large-header" class="large-header">
+   
+  
+    <header class="Header">
+      <a href="#" class="logo">Portfolio</a>
+      <i class="bx bx-menu" id="menu-icon"></i>
+      <nav class="navbar" id="nav">
+        <a href="#" onclick="showHome()" data-title="Home">Home <i class="bx bx-home"></i></a>
+        <a href="#" onclick="showAbout()" data-title="About">About <i class="bx bx-user"></i></a>
+        <a href="#" onclick="showService()" data-title="Services">Services <i class="bx bx-briefcase"></i></a>
+       
+        <a href="#" onclick="showPortfolio()" data-title="Portfolio">Portfolio <i class="bx bx-image"></i></a>
+        <a href="#" onclick="showContect()" data-title="Contact Me">Contact <i class="bx bx-envelope"></i></a>
+      </nav>
+    </header>
+
+  <!-- Home Section -->
+  <section class="home" id="Home">
+    <div class="home-content">
+      <h3>Hello, I am</h3>
+      <h1>Ketan Patel</h1>
+      <h3>And I'm a <span class="dynamic-text">VFX & 3D Artist</span></h3>
+      <p>Hey there! 👋 I'm Ketan Patel, a passionate and ambitious student specializing in Information Technology
+        with a focus on Fullstack development. 🚀</p>
+      <div class="social-media">
+        <a href="#"><i class='bx bxl-youtube'></i></a>
+        <a href="#"><i class='bx bxl-instagram'></i></a>
+        <a href="#"><i class='bx bxl-twitter'></i></a>
+        <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+      </div>
+      <a href="./MyResume.jpg" download="Resume" class="btn">Download CV</a>
+    </div>
+    <div class="image animate-image">
+      <img  src="kamal.jpg" alt="image" class="animate-image">
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="About" style="display: none;">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-2">
+          <img src="#" class="aboutImg" alt="About Me">
+        </div>
+        <div class="about-col-1">
+          <h1 class="subTitle">About <span>Me</span></h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, culpa assumenda. Nobis animi, ullam illum debitis neque eum facilis
+            mollitia in soluta, necessitatibus doloremque aspernatur facere assumenda voluptate accusamus eveniet.</p>
+          <div class="tabTitles">
+            <p class="tab-links activeLink" onclick="openTab('Skills')">Skills</p>
+            <p class="tab-links" onclick="openTab('Experience')">Experience</p>
+            <p class="tab-links" onclick="openTab('Education')">Education</p>
+          </div>
+          <div class="tabContents activeTab" id="Skills">
+            <ul>
+              <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+              <li><span>Photoshop</span><br>Photo Manipulation and Editing</li>
+              <li><span>Premiere Pro</span><br>Video Editing and Effects</li>
+            </ul>
+          </div>
+          <div class="tabContents" id="Experience">
+            <ul>
+              <li><span>2023</span><br>Freelance Web Development</li>
+              <li><span>2022</span><br>Graphic Design for Local Businesses</li>
+            </ul>
+          </div>
+          <div class="tabContents" id="Education">
+            <ul>
+              <li><span>2020</span><br>Bachelor of Computer Science</li>
+              <li><span>2021</span><br>Certified Graphic Designer</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Service Section-->
+  <section class="Services" id="Services"  style="display: none;">
+
+    <h2 class="heading">My <span>Services</span></h2>
+    <div class="service-container">
+      <div class="service-box">
+        <img src="animatecc.jpg">
+        <div class="service-layer">
+          <h4>AnimateCC</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+          <a href="#"><i class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+      <div class="service-box">
+        <img src="illustrater.jpg">
+        <div class="service-layer">
+          <h4>Illustrater</h4>
+          <p> I've created a dynamic and user-friendly web application that utilizes JS APIs to retrieve event data.
+            🌍💻 With this app
+          </p>
+          <a href="#"><i class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+
+      <div class="service-box">
+        <img src="AterEffect.jpg">
+        <div class="service-layer">
+          <h4>AfterEffect</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+          <a href="#"><i class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+      <div class="service-box">
+        <img src="PhotoShop.jpg">
+        <div class="service-layer">
+          <h4>PhotoShop</h4>
+          <p> I've created a login and registration project using HTML, CSS, and JavaScript.  🔒 🌟</p>
+            <a href="#"><i class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+      <div class="service-box">
+        <img src="Maya.jpg">
+        <div class="service-layer">
+          <h4>Maya</h4>
+          <p> I've created a login and registration project using HTML, CSS, and JavaScript.  🔒 🌟</p>
+            <a href="#"><i class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+      <div class="service-box">
+        <img src="PremiumPro.jpg">
+        <div class="service-layer">
+          <h4>PremiumPro</h4>
+          <p> I've created a login and registration project using HTML, CSS, and JavaScript.  🔒 🌟</p>
+            <a href="#"><i class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+
+     
+    </div>
+  </section>
+  
+ <!--Portfolio-->
+ <section class="portfolio" id="Portfolio" style="display: none;">
+  <div class="head"><h2 class="portfolio-heading">My <span>Work</span></h2></div>
+  
+  <div class="portfolio-container">
+    <div class="portfolio-card">
+      <div class="portfolio-box">
+        <div class="portfolio-content">
+          
+          <h1>AnimateCC Work</h1>
+          <a href="#"  class="btn">click me</a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="portfolio-card">
+      <div class="portfolio-box">
+        <div class="portfolio-content">
+         
+          <h1>Illustrater Work</h1>
+          <a href="#"  class="btn">click me</a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="portfolio-card">
+      <div class="portfolio-box">
+        <div class="portfolio-content">
+        
+         <h1>AfterEffect Work</h1>
+          <a href="#"  class="btn">click me</a>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-card">
+      <div class="portfolio-box">
+        <div class="portfolio-content">
+         
+         <h1>PhotoShop Work</h1>
+         <a href="photoshopwork.html" class="btn">click me</a>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-card">
+      <div class="portfolio-box">
+        <div class="portfolio-content">
+         
+        <h1>Maya Work</h1>
+          <a href="#"  class="btn">click me</a>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-card">
+      <div class="portfolio-box">
+        <div class="portfolio-content">
+         
+         <h1>PremiumPro Work</h1>
+          <a href="#"  class="btn">click me</a>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-card">
+      <div class="portfolio-box">
+        <div class="portfolio-content">
+         
+         <h1>PremiumPro Work</h1>
+          <a href="#"  class="btn">click me</a>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-card">
+      <div class="portfolio-box">
+        <div class="portfolio-content">
+         
+         <h1>PremiumPro Work</h1>
+          <a href="#"  class="btn">click me</a>
+        </div>
+      </div>
+    </div>
+  </div>
+ </section>
+
+ <!--Contect-->
+ <section class="contect" id="contect" style="display: none;">
+  <div id="contact">
+  <div class="contect-container">
+      <div class="contect-row">
+          <div class="contactLeft">
+              <h1 class="contect-subTitle">Contact <span>Me</span></h1>
+              <p><i class='bx bxs-send' ></i>email@example.com</p>
+              <p><i class='bx bxs-phone-call' ></i>+1234567890</p>
+              <div class="contect-socialIcons">
+
+                  <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                  <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+                  <a href="#"><i class='bx bxl-twitter'></i></a>
+                  <a href="#"><i class='bx bxl-youtube'></i></a>
+              </div>
+          </div>
+          <div class="contactRight">
+            <form  action="https://formspree.io/f/mnnqbbzn" method="POST" class="Contact-form">
+              <input type="text" placeholder="Enter Your Name" id="name" name="name" autocomplete="off" required>
+              <input type="email" placeholder="Enter Your Email" id="email" name="email" autocomplete="off" required>
+              <textarea id="message" cols="" rows="" placeholder="Your Message" name="message"></textarea>
+                  <button type="submit" class="btn2 formBtn">Send Message</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+</section class="footer" id="footer">
+<section class="footer">
+  <div class="footer">
+    <div class="footer-text">
+        <p>&copy; 2024 Ketan Patel. All Rights Reserved.</p>
+    </div>
+</div>
+</section>
+  <canvas id="demo-canvas"></canvas>
+</div>
+
+  <script src="portfolio.js"></script>
+</body>
+</html>

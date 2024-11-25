@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhotoShop Work</title>
+  <link rel="stylesheet" href="style.css"> <!-- Link your existing CSS -->
+  <style>
+    .photoshop-work {
+      text-align: center;
+      margin: 20px;
+      color: #333;
+    }
+
+    .photoshop-work h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .image-gallery img {
+      width: 200px;
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease;
+      cursor: pointer;
+    }
+
+    .image-gallery img:hover {
+      transform: scale(1.1);
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .btn:hover {
+      background-color: #555;
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 80%; /* Limit the size of the image */
+      max-height: 80%; /* Limit height */
+      border-radius: 10px;
+    }
+
+    .modal-content:hover {
+      transform: scale(1.05); /* Slight zoom on hover */
+      transition: 0.3s ease;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .close:hover {
+      color: #ccc;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 770px) {
+      .photoshop-work h1 {
+        font-size: 2rem;
+      }
+
+      .image-gallery img {
+        width: 160px; /* Smaller image size for medium screens */
+      }
+
+      .btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .photoshop-work h1 {
+        font-size: 1.8rem;
+      }
+
+      .image-gallery {
+        gap: 10px; /* Reduce spacing */
+      }
+
+      .image-gallery img {
+        width: 120px; /* Smaller image size for small screens */
+      }
+
+      .btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="photoshop-work">
+    <h1>PhotoShop Work</h1>
+    <div class="image-gallery">
+      <img src="./PhotoShop/photoshop1.jpg" alt="Image 1" class="clickable-image">
+      <img src="./PhotoShop/photoshop2.jpg" alt="Image 2" class="clickable-image">
+      <img src="./PhotoShop/photoshop3.jpg" alt="Image 3" class="clickable-image">
+      <!-- Add more images as needed -->
+    </div>
+    <a href="portfolio.html" class="btn">Back to Portfolio</a>
+    <!-- Modal Structure -->
+    <div class="modal" id="imageModal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImage">
+    </div>
+  </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImage");
+      const closeBtn = document.querySelector(".close");
+
+      // Add click event to each image
+      document.querySelectorAll(".clickable-image").forEach((img) => {
+        img.addEventListener("click", () => {
+          modal.style.display = "block"; // Show modal
+          modalImg.src = img.src; // Set modal image source
+        });
+      });
+
+      // Close modal when 'X' is clicked
+      closeBtn.addEventListener("click", () => {
+        modal.style.display = "none"; // Hide modal
+      });
+
+      // Close modal when clicking outside the image
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
